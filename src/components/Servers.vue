@@ -4,25 +4,11 @@
       <v-card>
 
         <v-list two-line>
-          <template v-for="(item, index) in items">
-            <v-subheader
-              v-if="item.header"
-              :key="item.header"
-            >
-              {{ item.header }}
-            </v-subheader>
-
-            <v-divider
-              v-else-if="item.divider"
-              :inset="item.inset"
-              :key="index"
-            ></v-divider>
-
+          <template v-for="(item) in items">
+            
             <v-list-tile
-              v-else
               :key="item.title"
-              avatar
-
+              @click=""
             >
               <v-icon v-html="item.icon"></v-icon>
 
@@ -30,6 +16,7 @@
                 <v-list-tile-title v-html="item.title" class="pl-4"></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
+            
           </template>
         </v-list>
       </v-card>
